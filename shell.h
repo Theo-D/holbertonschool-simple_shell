@@ -23,11 +23,15 @@ extern char **environ;
 
 typedef struct inputToCmd{
 	const char *cmd;
-	const char *path;
+	int (*fun)(char **av);
 } cmd_t;
 
-char *_getLine(void);
+int exitCmd(char **av);
+int envCmd(char **av);
 
-void tokenizeInput(char *input);
+char *_getLine(void);
+char **tokenizeInput(char *input);
+
+void getCmd(char **av);
 
 #endif
