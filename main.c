@@ -8,11 +8,11 @@ int main(void)
 	while(1)
 	{
 		char *cmd;
+		char **av;
 
 		cmd = _getLine();
-		tokenizeInput(cmd);
-
-
+		av = tokenizeInput(cmd);
+		getCmd(av);
 		free(cmd);
 	}
 	return (0);
