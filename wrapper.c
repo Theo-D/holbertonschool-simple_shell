@@ -28,8 +28,10 @@ char *_getLine(void)
 	return (string);
 }
 
-void tokenizeInput(char *cmd)
+char **tokenizeInput(char *cmd)
 {
+
+	/*Transform *token into **tokens*/
 	char *token;
 
 	token = strtok(cmd, SEP);
@@ -38,4 +40,5 @@ void tokenizeInput(char *cmd)
 		printf("%s\n", token);
 		token = strtok(NULL, SEP);
 	}
+	return (token);
 }
