@@ -30,15 +30,16 @@ char *_getLine(void)
 
 char **tokenizeInput(char *cmd)
 {
-
-	/*Transform *token into **tokens*/
+	int i = 0;
 	char *token;
+	char **tokenArr = malloc(BUFF_SIZE * sizeof(token));
 
 	token = strtok(cmd, SEP);
 	while (token != NULL)
 	{
-		printf("%s\n", token);
+		tokenArr[i] = token;
 		token = strtok(NULL, SEP);
+		i++;
 	}
-	return (token);
+	return (tokenArr);
 }
