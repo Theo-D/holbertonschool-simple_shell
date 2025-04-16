@@ -1,5 +1,8 @@
 # Simple Shell
 
+![Langage Shell](https://raw.githubusercontent.com/ton-utilisateur/ton-repo/main/images/shell-cover.gif)
+
+
 ## Methodoly (to be confirmed)
 
 -Every include, struct declarations, constant declarations and function declarations in header file "shell.h".
