@@ -1,8 +1,6 @@
 # Simple Shell
 
 
-![Image](https://github.com/user-attachments/assets/589f2ef7-8d83-4237-b577-c547eb3e51a9)
-
 ## Methodoly (to be confirmed)
 
 -Every include, struct declarations, constant declarations and function declarations in header file "shell.h".
