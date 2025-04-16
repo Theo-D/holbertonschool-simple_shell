@@ -2,6 +2,7 @@
 
 ![Langage Shell] (https://raw.githubusercontent.com/ton-utilisateur/ton-repo/main/images/shell-cover.gif)
 
+![Image](https://github.com/user-attachments/assets/589f2ef7-8d83-4237-b577-c547eb3e51a9)
 
 ## Methodoly (to be confirmed)
 
