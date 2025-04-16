@@ -28,6 +28,7 @@ typedef struct inputToCmd{
 
 int exitCmd(char **av);
 int envCmd(char **av);
+int executeCmd(char **av);
 
 char *_getLine(void);
 char **tokenizeInput(char *input);
