@@ -13,7 +13,6 @@ int main(void)
 		cmd = _getLine();
 		av = tokenizeInput(cmd);
 		getCmd(av);
-		free(cmd);
 	}
 	return (0);
 }
