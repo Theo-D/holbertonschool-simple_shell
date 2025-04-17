@@ -19,7 +19,7 @@ int executeCmd(char **av)
 
 	if (errFork < 0)
 	{
-		perror("Child process was not created.")
+		perror("Child process was not created.");
 		exit(-1);
 	}
 	else if (errFork == 0)
