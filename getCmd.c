@@ -30,7 +30,7 @@ void getCmd(char **av)
 	/*fprintf(stderr, "errCmd après executeCmd: %d\n", errCmd);*/
 	if (errCmd < 0)
 	{
-		fprintf(stderr, "%s: Command not found\n", av[0]);
+		/*fprintf(stderr, "%s: Command not found\n", av[0]);*/
 		free(*av);
 		*av = NULL;
 	}
