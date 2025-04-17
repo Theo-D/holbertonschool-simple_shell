@@ -7,18 +7,19 @@
 char *_getLine(void)
 {
 	char *line;
-	char *currentDir;
-	char cwd[BUFF_SIZE];
+	/*char *currentDir;*/
+	/*char cwd[BUFF_SIZE];*/
 	size_t strSize;
 	int charCount;
 
-	currentDir = getcwd(cwd, BUFF_SIZE);
-
-	if (currentDir != NULL)
-		printf("%s($)", currentDir);
-	else
-		printf("($)");
 	/**
+	 * currentDir = getcwd(cwd, BUFF_SIZE);
+	 * if (currentDir != NULL)
+	 *	printf("%s($)", currentDir);
+	 * else
+	 */
+	 printf("($)");
+	 /**
 	 * Initialize string to NULL for getLine() to allocate memory under
 	 * the hood
 	 */
