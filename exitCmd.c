@@ -7,6 +7,6 @@
  */
 int exitCmd(__attribute__((unused))char **av)
 {
-	exit(EXIT_SUCCESS);
+	exit(EXIT_FAILURE);
 	return (0);
 }
