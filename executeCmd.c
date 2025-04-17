@@ -1,17 +1,25 @@
 #include "shell.h"
 /**
+ * executeCmd - Handles creation of child process to execute function
+ * input by user.
+ * @av: array of string reprensenting command input by user.
  *
+ * Return: 0 on succes, -1 on failure.
  */
 int executeCmd(char **av)
 {
 	pid_t errFork = 0;
 	int errExec = 0, status = 0;
 
+	if (av == NULL)
+	{
+		exit(EXIT_FAILURE);
+	}
 	errFork = fork();
-	
+
 	if (errFork < 0)
 	{
-		/*HANDLE ERROR*/
+		perror("Child process was not created.")
 		exit(-1);
 	}
 	else if (errFork == 0)
@@ -21,9 +29,9 @@ int executeCmd(char **av)
 		 * so we execute the file named after the command.
 		 */
 		errExec = execve(av[0], av, environ);
-		if(errExec)
+		if (errExec)
 		{
-			/*HANDLE ERROR*/
+			perror("Could not execute command");
 			exit(-1);
 		}
 	}
