@@ -18,7 +18,8 @@ char *_getLine(void)
 	 *	printf("%s($)", currentDir);
 	 * else
 	 */
-	 printf("($)");
+	if (isatty)
+		printf("($)");
 	 /**
 	 * Initialize string to NULL for getLine() to allocate memory under
 	 * the hood
@@ -28,7 +29,7 @@ char *_getLine(void)
 
 	if (charCount == -1)
 	{
-		fprintf(stderr, "Error or EoF\n");
+		/*fprintf(stderr, "Error or EoF\n");*/
 		free(line);
 		exit(EXIT_FAILURE);
 		/*return (-1); Fix infinite printing of string*/
