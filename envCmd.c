@@ -8,13 +8,14 @@
 int envCmd(__attribute__((unused))char **av)
 {
 	int i = 0;
+	char **envCpy = environ;
 
-	if (environ == NULL)
+	if (envCpy == NULL)
 		return (-1);
 
-	while (environ[i])
+	while (envCpy[i])
 	{
-		printf("%s\n", environ[i]);
+		printf("%s\n", envCpy[i]);
 		i++;
 	}
 	return (0);
