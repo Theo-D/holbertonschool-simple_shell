@@ -1,7 +1,9 @@
 
 # Simple shell - Holberton School Project 🧑‍🎓
 
-
+<p align="center">
+<img src="https://ml.globenewswire.com/Resource/Download/a08e6c28-55be-44c8-8461-03544f094b38" width="400" height="100">
+</p>
 
 
 ### Welcome to our Shell project ! 📟
