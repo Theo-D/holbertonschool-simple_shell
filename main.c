@@ -15,7 +15,7 @@ int main(void)
 		cmd = _getLine();
 		av = tokenizeInput(cmd);
 		getCmd(av);
-		free(av);
+		freeArr(av);
 	}
 	return (0);
 }

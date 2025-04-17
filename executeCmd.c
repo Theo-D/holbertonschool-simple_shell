@@ -13,12 +13,15 @@ int executeCmd(char **av)
 
 	if (av == NULL || av[0] == NULL)
 	{
+		freeArr(av);
 		exit(EXIT_FAILURE);
 	}
+
 	errFork = fork();
 
 	if (errFork < 0)
 	{
+		freeArr(av);
 		perror("Child process was not created.");
 		exit(-1);
 	}
@@ -30,6 +33,7 @@ int executeCmd(char **av)
 		 */
 		if (execve(av[0], av, environ) == -1)
 		{
+			freeArr(av);
 			perror("Could not execute command");
 			exit(-1);
 		}
