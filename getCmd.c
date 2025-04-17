@@ -1,6 +1,10 @@
 #include "shell.h"
 /**
+ * getCmd - Compares first argument of av and executes corresponding
+ * builtin if it exists. Otherwise calls executeCmd.
+ * @av: Array of strings representing user input command.
  *
+ * Return: Nothing.
  */
 void getCmd(char **av)
 {
@@ -12,16 +16,22 @@ void getCmd(char **av)
 	};
 	while (cmdFunc[i].cmd != NULL)
 	{
-		if ((errCmd = strcmp(cmdFunc[i].cmd, av[0])) == 0)
+		if (strcmp(cmdFunc[i].cmd, av[0]) == 0)
 		{
 			cmdFunc[i].fun(av);
 			break;
 		}
+		else
+			errCmd = -1;
 		i++;
 	}
-	/*printf("errCmd en sortie de boucle: %d\n", errCmd);*/
+	/*fprintf(stderr, "errCmd en sortie de boucle: %d\n", errCmd);*/
 	executeCmd(av);
-	/*printf("errCmd après executeCmd: %d\n", errCmd);*/
+	/*fprintf(stderr, "errCmd après executeCmd: %d\n", errCmd);*/
 	if (errCmd < 0)
-		printf("%s: Command not found\n", av[0]);
+	{
+		fprintf(stderr, "%s: Command not found\n", av[0]);
+		free(*av);
+		*av = NULL;
+	}
 }
