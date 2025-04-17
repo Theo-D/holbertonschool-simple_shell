@@ -21,6 +21,8 @@
 /*points to an array of pointers to strings called the "environment"*/
 extern char **environ;
 
+void freeTokenArray(char **av, size_t size);
+
 typedef struct inputToCmd{
 	const char *cmd;
 	int (*fun)(char **av);
