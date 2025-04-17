@@ -8,7 +8,7 @@
  */
 void getCmd(char **av)
 {
-	int i = 0, errCmd = 0;
+	int i = 0, errCmd;
 	cmd_t cmdFunc[] = {
 		{"env", envCmd},
 		{"exit", exitCmd},
@@ -16,10 +16,11 @@ void getCmd(char **av)
 	};
 	while (cmdFunc[i].cmd != NULL)
 	{
+		errCmd = 0;
 		if (strcmp(cmdFunc[i].cmd, av[0]) == 0)
 		{
 			cmdFunc[i].fun(av);
-			break;
+			exit (0);
 		}
 		else
 			errCmd = -1;
