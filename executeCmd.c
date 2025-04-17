@@ -9,9 +9,9 @@
 int executeCmd(char **av)
 {
 	pid_t errFork = 0;
-	int errExec = 0, status = 0;
+	int  status = 0;
 
-	if (av == NULL)
+	if (av == NULL || av[0] == NULL)
 	{
 		exit(EXIT_FAILURE);
 	}
@@ -28,18 +28,20 @@ int executeCmd(char **av)
 		 * fork should be successful here, we are inthe child process
 		 * so we execute the file named after the command.
 		 */
-		errExec = execve(av[0], av, environ);
-		if (errExec)
+		if (execve(av[0], av, environ) == -1)
 		{
 			perror("Could not execute command");
 			exit(-1);
 		}
 	}
+	else
+	{
 	/**
 	 * If fork is successfull the following code will execute in the parent
 	 * process, so we wait the child to terminate.
 	 */
-	wait(&status);
-	/*equivalent to waitpid(-1, &status, 0)*/
+		wait(&status);
+		/*equivalent to waitpid(errFork, &status, 0)*/
+	}
 	return (0);
 }
