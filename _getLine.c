@@ -28,7 +28,7 @@ char *_getLine(void)
 
 	if (charCount == -1)
 	{
-		printf("Error or EoF\n");
+		fprintf(stderr, "Error or EoF\n");
 		free(line);
 		exit(EXIT_FAILURE);
 		/*return (-1); Fix infinite printing of string*/
