@@ -18,7 +18,7 @@ char *_getLine(void)
 	 *	printf("%s($)", currentDir);
 	 * else
 	 */
-	if (isatty)
+	if (isatty(1))
 		printf("($)");
 	 /**
 	 * Initialize string to NULL for getLine() to allocate memory under
