@@ -27,6 +27,8 @@ int executeCmd(char **av)
 		if (execve(av[0], av, environ) == -1)
 		{
 			/*fprintf(stderr, "Could not execute command");*/
+			freeArr(av);
+			exit(2);
 			return (-1);
 		}
 	}
