@@ -8,31 +8,29 @@
  */
 void getCmd(char **av)
 {
-	int i = 0, errCmd;
+	int i = 0;
 	cmd_t cmdFunc[] = {
 		{"env", envCmd},
 		{"exit", exitCmd},
 		{NULL}
 	};
+
+	if (av == NULL || av[0] == NULL)
+	{
+		/*frpintf(stderr, "Array of tokens is empty in getCmd");*/
+		free(av);
+		exit(-1);
+	}
+
 	while (cmdFunc[i].cmd != NULL)
 	{
-		errCmd = 0;
 		if (strcmp(cmdFunc[i].cmd, av[0]) == 0)
 		{
 			cmdFunc[i].fun(av);
-			exit (0);
+			return;
 		}
-		else
-			errCmd = -1;
 		i++;
 	}
-	/*fprintf(stderr, "errCmd en sortie de boucle: %d\n", errCmd);*/
+
 	executeCmd(av);
-	/*fprintf(stderr, "errCmd après executeCmd: %d\n", errCmd);*/
-	if (errCmd < 0)
-	{
-		/*fprintf(stderr, "%s: Command not found\n", av[0]);*/
-		free(*av);
-		*av = NULL;
-	}
 }

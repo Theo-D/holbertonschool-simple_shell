@@ -15,7 +15,9 @@ char **tokenizeInput(char *line)
 
 	if (line == NULL)
 	{
-		exit(EXIT_FAILURE);
+		free(line);
+		/*fprintf(stderr, "No input to parse in tokenizeInput.cmd");*/
+		exit(-1);
 	}
 
 	while (token != NULL)
@@ -38,7 +40,8 @@ char **tokenizeInput(char *line)
 		token = strtok(NULL, SEP);
 		i++;
 	}
-	tokenArr[i] = NULL;
+	tokenArr[i] = '\0';
 
+	free(line);
 	return (tokenArr);
 }
