@@ -15,14 +15,14 @@ int executeCmd(char **av)
 	{
 		/*fprintf(stderr, "Array of tokens is empty in executeCmd");*/
 		freeArr(av);
-		exit(-1);
+		exit(4);
 	}
 	errFork = fork();
 	if (errFork < 0)
 	{
 		freeArr(av);
 		/*fprintf(stderr, "Child process was not created.");*/
-		exit(-1);
+		exit(4);
 	}
 	else if (errFork == 0)
 	{
@@ -34,7 +34,7 @@ int executeCmd(char **av)
 		{
 			freeArr(av);
 			/*fprintf(stderr, "Could not execute command");*/
-			exit(-1);
+			exit(0);
 		}
 	}
 	else

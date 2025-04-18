@@ -19,7 +19,7 @@ void getCmd(char **av)
 	{
 		/*frpintf(stderr, "Array of tokens is empty in getCmd");*/
 		free(av);
-		exit(-1);
+		exit(3);
 	}
 
 	while (cmdFunc[i].cmd != NULL)

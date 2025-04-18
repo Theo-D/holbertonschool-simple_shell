@@ -31,7 +31,7 @@ char *_getLine(void)
 	{
 		/*fprintf(stderr, "Error or EoF\n");*/
 		free(line);
-		exit(-1);
+		exit(1);
 	}
 	return (line);
 }
