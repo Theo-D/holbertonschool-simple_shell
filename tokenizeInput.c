@@ -36,12 +36,13 @@ char **tokenizeInput(char *line)
 		*	tokenArr = temp;
 		*}
 		*/
-		tokenArr[i] = token;
+		tokenArr[i] = strdup(token);
 		token = strtok(NULL, SEP);
 		i++;
 	}
 	tokenArr[i] = '\0';
-
 	free(line);
+	free(newLine);
+
 	return (tokenArr);
 }
