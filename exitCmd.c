@@ -8,5 +8,5 @@
 int exitCmd(__attribute__((unused))char **av)
 {
 	freeArr(av);
-	exit(0);
+	exit(2);
 }
