@@ -8,7 +8,7 @@
  */
 void getCmd(char **av)
 {
-	int i = 0;
+	int i = 0, errFun = 0;
 	cmd_t cmdFunc[] = {
 		{"env", envCmd},
 		{"exit", exitCmd},
@@ -27,6 +27,13 @@ void getCmd(char **av)
 		}
 		i++;
 	}
+	errFun = -1;
 
-	executeCmd(av);
+	errFun = executeCmd(av);
+
+	if (errFun == -1)
+	{
+		freeArr(av);
+		exit(2);
+	}
 }
