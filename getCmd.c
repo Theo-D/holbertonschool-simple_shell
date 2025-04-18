@@ -15,12 +15,8 @@ void getCmd(char **av)
 		{NULL}
 	};
 
-	if (av == NULL)
-	{
-		/*frpintf(stderr, "Array of tokens is empty in getCmd");*/
-		free(av);
-		exit(0);
-	}
+	if (av == NULL || av[0] == NULL)
+		return;
 
 	while (cmdFunc[i].cmd != NULL)
 	{
