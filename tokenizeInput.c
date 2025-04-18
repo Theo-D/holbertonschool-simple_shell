@@ -17,7 +17,7 @@ char **tokenizeInput(char *line)
 	{
 		free(line);
 		/*fprintf(stderr, "No input to parse in tokenizeInput.cmd");*/
-		exit(2);
+		exit(0);
 	}
 
 	while (token != NULL)
