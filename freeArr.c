@@ -9,8 +9,8 @@ void freeArr(char **av)
 {
 	int i = 0;
 
-	if (av == NULL)
-		return;
+	/*if (av == NULL)
+		return;*/
 
 	while (av[i])
 	{
