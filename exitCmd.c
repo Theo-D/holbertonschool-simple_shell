@@ -8,5 +8,5 @@
 int exitCmd(char **av)
 {
 	freeArr(av);
-	exit(2);
+	exit(0);
 }
