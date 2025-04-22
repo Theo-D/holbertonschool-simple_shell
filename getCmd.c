@@ -36,6 +36,6 @@ void getCmd(char **av, int *exitStat)
 	if (errFun == -1)
 	{
 
-		exitCmd(av, 2);
+		exitCmd(av, *exitStat);
 	}
 }
