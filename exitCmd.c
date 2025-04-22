@@ -8,6 +8,7 @@
  */
 int exitCmd(char **av, int exitStat)
 {
+	exitStat = exitStat;
 	freeArr(av);
-	exit(exitStat);
+	exit(2);
 }
