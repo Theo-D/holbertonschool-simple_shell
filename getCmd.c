@@ -22,7 +22,7 @@ void getCmd(char **av)
 	{
 		if (strcmp(cmdFunc[i].cmd, av[0]) == 0)
 		{
-			cmdFunc[i].fun(av);
+			cmdFunc[i].fun(av, 0);
 			return;
 		}
 		i++;
@@ -34,7 +34,6 @@ void getCmd(char **av)
 
 	if (errFun == -1)
 	{
-		freeArr(av);
-		exit(2);
+		exitCmd(av, 2);
 	}
 }
