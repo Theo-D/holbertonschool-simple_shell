@@ -1,4 +1,5 @@
 #include "shell.h"
+
 /**
  * main - Loops waiting for user input, until process is exited.
  *
@@ -7,6 +8,8 @@
 /*tester avec int argc, char ** argv*/
 int main(void)
 {
+	int exitStat = 0;
+
 	while (1)
 	{
 		char *cmd;
@@ -14,8 +17,12 @@ int main(void)
 
 		cmd = _getLine();
 		av = tokenizeInput(cmd);
+<<<<<<< HEAD
 		getCmd(av);
+=======
+		getCmd(av, &exitStat);
+>>>>>>> origin/main
 		freeArr(av);
 	}
-	return (0);
+	return (exitStat);
 }

@@ -25,16 +25,19 @@ void freeArr(char **av);
 
 typedef struct inputToCmd{
 	const char *cmd;
-	int (*fun)(char **av);
+	int (*fun)(char **av, int *exitStat);
 } cmd_t;
 
-int exitCmd(char **av);
-int envCmd(char **av);
-int executeCmd(char **av);
+/*Executing built in commands*/
+int exitCmd(char **av, int *exitStat);
+int envCmd(char **av, int *exitStat);
+
+/*Executing executable files*/
+int executeCmd(char **av, int *exitStat);
 
 char *_getLine(void);
 char **tokenizeInput(char *input);
 
-void getCmd(char **av);
+void getCmd(char **av, int *exitStat);
 
 #endif

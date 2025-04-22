@@ -2,10 +2,13 @@
 /**
  * exitCmd - Exits current process.
  * @av: Array of strings.
+ * @exitStat: integer to follow the value of exit status.
  *
  * Return: 0 on success.
  */
-int exitCmd(__attribute__((unused))char **av)
+int exitCmd(char **av, int *exitStat)
 {
-	exit(0);
+	/*printf("Valeur de exitStat dans exitCmd: %d\n", *exitStat);*/
+	freeArr(av);
+	exit(*exitStat);
 }

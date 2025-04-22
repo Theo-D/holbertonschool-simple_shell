@@ -17,7 +17,11 @@ char **tokenizeInput(char *line)
 	{
 		free(line);
 		/*fprintf(stderr, "No input to parse in tokenizeInput.cmd");*/
+<<<<<<< HEAD
 		exit(-1);
+=======
+		exit(0);
+>>>>>>> origin/main
 	}
 
 	while (token != NULL)
@@ -36,11 +40,16 @@ char **tokenizeInput(char *line)
 		*	tokenArr = temp;
 		*}
 		*/
-		tokenArr[i] = token;
+		tokenArr[i] = strdup(token);
 		token = strtok(NULL, SEP);
 		i++;
 	}
 	tokenArr[i] = '\0';
+<<<<<<< HEAD
+=======
+	free(line);
+	free(newLine);
+>>>>>>> origin/main
 
 	free(line);
 	return (tokenArr);

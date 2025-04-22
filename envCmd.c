@@ -2,12 +2,15 @@
 /**
  * envCmd - Prints array of environment variables.
  * @av: Array of strings.
+ * @exitStat: integer to follow the value of exit status.
  *
  * Return: 0 on succes, -1 on failure
  */
-int envCmd(__attribute__((unused))char **av)
+int envCmd(__attribute__((unused))char **av,
+		__attribute__((unused))int *exitStat)
 {
 	int i = 0;
+<<<<<<< HEAD
 	char **envCpy = environ;
 
 	while (envCpy[i])

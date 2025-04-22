@@ -9,9 +9,12 @@ void freeArr(char **av)
 {
 	int i = 0;
 
+<<<<<<< HEAD
 	if (av == NULL)
 		return;
 
+=======
+>>>>>>> origin/main
 	while (av[i])
 	{
 		free(av[i]);

@@ -3,38 +3,53 @@
  * executeCmd - Handles creation of child process to execute function
  * input by user.
  * @av: array of string reprensenting command input by user.
+ * @exitStat: integer to follow the value of exit status.
  *
  * Return: 0 on succes, -1 on failure.
  */
-int executeCmd(char **av)
+int executeCmd(char **av, int *exitStat)
 {
 	pid_t errFork = 0;
 	int  status = 0;
 
+<<<<<<< HEAD
 	if (av == NULL || av[0] == NULL)
 	{
 		/*fprintf(stderr, "Array of tokens is empty in executeCmd");*/
 		freeArr(av);
 		exit(-1);
 	}
+=======
+>>>>>>> origin/main
 	errFork = fork();
 	if (errFork < 0)
 	{
+<<<<<<< HEAD
 		freeArr(av);
 		/*fprintf(stderr, "Child process was not created.");*/
 		exit(-1);
+=======
+		/*fprintf(stderr, "Child process was not created.");*/
+		return (-1);
+>>>>>>> origin/main
 	}
 	else if (errFork == 0)
 	{
 		/**
-		 * fork should be successful here, we are inthe child process
+		 * fork should be successful here, we are in the child process
 		 * so we execute the file named after the command.
 		 */
 		if (execve(av[0], av, environ) == -1)
 		{
+<<<<<<< HEAD
 			freeArr(av);
 			/*fprintf(stderr, "Could not execute command");*/
 			exit(-1);
+=======
+			/*fprintf(stderr, "Could not execute command");*/
+			freeArr(av);
+			return (-1);
+>>>>>>> origin/main
 		}
 	}
 	else
@@ -44,7 +59,8 @@ int executeCmd(char **av)
 	 * process, so we wait the child to terminate.
 	 */
 		wait(&status);
-		/*equivalent to waitpid(errFork, &status, 0)*/
+		*exitStat = WEXITSTATUS(status);
 	}
+
 	return (0);
 }
