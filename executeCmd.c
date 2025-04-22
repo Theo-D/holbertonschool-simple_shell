@@ -38,7 +38,7 @@ int executeCmd(char **av)
 	 * process, so we wait the child to terminate.
 	 */
 		wait(&status);
-		/*WEXITSTATUS(status)*/;
+		WEXITSTATUS(status);
 	}
 	return (0);
 }
