@@ -5,8 +5,8 @@
  *
  * Return: 0 on success.
  */
-int exitCmd(__attribute__((unused))char **av)
+int exitCmd(char **av)
 {
 	freeArr(av);
-	exit(0);
+	exit(2);
 }
