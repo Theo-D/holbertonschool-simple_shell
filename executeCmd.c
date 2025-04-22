@@ -1,6 +1,5 @@
 #include "shell.h"
 /**
- *
  * executeCmd - Handles creation of child process to execute function
  * input by user.
  * @av: array of string reprensenting command input by user.
@@ -13,7 +12,7 @@ int executeCmd(char **av)
 	int  status = 0;
 
 	errFork = fork();
-	if (errFork < 0)
+	if (errFork != 0)
 	{
 		/*fprintf(stderr, "Child process was not created.");*/
 		return (-1);
@@ -21,7 +20,7 @@ int executeCmd(char **av)
 	else if (errFork == 0)
 	{
 		/**
-		 * fork should be successful here, we are inthe child process
+		 * fork should be successful here, we are in the child process
 		 * so we execute the file named after the command.
 		 */
 		if (execve(av[0], av, environ) == -1)
@@ -38,8 +37,8 @@ int executeCmd(char **av)
 	 * If fork is successfull the following code will execute in the parent
 	 * process, so we wait the child to terminate.
 	 */
-		wait(&status);
-		/*equivalent to waitpid(errFork, &status, 0)*/
+		waitpid(errFork, &status, 0);
+		WEXITSTATUS(status);
 	}
 	return (0);
 }
