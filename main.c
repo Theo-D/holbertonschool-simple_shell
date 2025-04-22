@@ -8,7 +8,7 @@
 /*tester avec int argc, char ** argv*/
 int main(void)
 {
-	int exitStat = 0;
+	int exitStat = 2;
 
 	while (1)
 	{
