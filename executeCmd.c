@@ -3,10 +3,11 @@
  * executeCmd - Handles creation of child process to execute function
  * input by user.
  * @av: array of string reprensenting command input by user.
+ * @exitStat: integer to follow the value of exit status.
  *
  * Return: 0 on succes, -1 on failure.
  */
-int executeCmd(char **av)
+int executeCmd(char **av, int *exitStat)
 {
 	pid_t errFork = 0;
 	int  status = 0;
@@ -38,7 +39,8 @@ int executeCmd(char **av)
 	 * process, so we wait the child to terminate.
 	 */
 		wait(&status);
-		WEXITSTATUS(status);
+		*exitStat = WEXITSTATUS(status);
 	}
+
 	return (0);
 }

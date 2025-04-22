@@ -33,11 +33,11 @@ int exitCmd(char **av, int exitStat);
 int envCmd(char **av, int exitStat);
 
 /*Executing executable files*/
-int executeCmd(char **av);
+int executeCmd(char **av, int *exitStat);
 
 char *_getLine(void);
 char **tokenizeInput(char *input);
 
-void getCmd(char **av);
+void getCmd(char **av, int *exitStat);
 
 #endif
