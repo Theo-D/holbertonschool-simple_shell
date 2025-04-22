@@ -31,7 +31,7 @@ void getCmd(char **av, int *exitStat)
 	/*errFun = -1;*/
 
 	/*errFun = */executeCmd(av, exitStat);
-	printf("valeur de exitStat après executeCmd: %d\n", *exitStat);
+	/*printf("valeur de exitStat après executeCmd: %d\n", *exitStat);*/
 
 	/*if (errFun == -1)
 	{

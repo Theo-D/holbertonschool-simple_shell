@@ -8,7 +8,7 @@
  */
 int exitCmd(char **av, int *exitStat)
 {
-	printf("Valeur de exitStat dans exitCmd: %d\n", *exitStat);
+	/*printf("Valeur de exitStat dans exitCmd: %d\n", *exitStat);*/
 	freeArr(av);
 	exit(*exitStat);
 }
