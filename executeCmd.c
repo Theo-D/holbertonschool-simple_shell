@@ -12,26 +12,12 @@ int executeCmd(char **av, int *exitStat)
 	pid_t errFork = 0;
 	int  status = 0;
 
-<<<<<<< HEAD
-	if (av == NULL || av[0] == NULL)
-	{
-		/*fprintf(stderr, "Array of tokens is empty in executeCmd");*/
-		freeArr(av);
-		exit(-1);
-	}
-=======
->>>>>>> origin/main
 	errFork = fork();
+
 	if (errFork < 0)
 	{
-<<<<<<< HEAD
-		freeArr(av);
-		/*fprintf(stderr, "Child process was not created.");*/
-		exit(-1);
-=======
 		/*fprintf(stderr, "Child process was not created.");*/
 		return (-1);
->>>>>>> origin/main
 	}
 	else if (errFork == 0)
 	{
@@ -41,15 +27,9 @@ int executeCmd(char **av, int *exitStat)
 		 */
 		if (execve(av[0], av, environ) == -1)
 		{
-<<<<<<< HEAD
-			freeArr(av);
-			/*fprintf(stderr, "Could not execute command");*/
-			exit(-1);
-=======
 			/*fprintf(stderr, "Could not execute command");*/
 			freeArr(av);
 			return (-1);
->>>>>>> origin/main
 		}
 	}
 	else

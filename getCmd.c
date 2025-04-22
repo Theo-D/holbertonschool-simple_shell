@@ -9,11 +9,7 @@
  */
 void getCmd(char **av, int *exitStat)
 {
-<<<<<<< HEAD
-	int i = 0;
-=======
 	int i = 0/*, errFun = 0*/;
->>>>>>> origin/main
 	cmd_t cmdFunc[] = {
 		{"env", envCmd},
 		{"exit", exitCmd},
@@ -27,19 +23,11 @@ void getCmd(char **av, int *exitStat)
 	{
 		if (strcmp(cmdFunc[i].cmd, av[0]) == 0)
 		{
-<<<<<<< HEAD
-			cmdFunc[i].fun(av);
-=======
 			cmdFunc[i].fun(av, exitStat);
->>>>>>> origin/main
 			return;
 		}
 		i++;
 	}
-<<<<<<< HEAD
-
-	executeCmd(av);
-=======
 	/*errFun = -1;*/
 
 	/*errFun = */executeCmd(av, exitStat);
@@ -50,5 +38,4 @@ void getCmd(char **av, int *exitStat)
 
 		exitCmd(av, *exitStat);
 	}*/
->>>>>>> origin/main
 }

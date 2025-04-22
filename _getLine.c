@@ -29,11 +29,9 @@ char *_getLine(void)
 
 	if (charCount == -1)
 	{
-<<<<<<< HEAD
-		exit(-1);
-=======
+		/*fprintf(stderr, "Error or EoF\n");*/
+		free(line);
 		exit(0);
->>>>>>> origin/main
 	}
 	return (line);
 }

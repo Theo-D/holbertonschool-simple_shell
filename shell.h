@@ -13,7 +13,7 @@
 #include <errno.h>
 
 /*Spacing characters according to isspace() man page*/
-#define SEP " \t\n\v\f\r"
+#define SEP " \t\n\v\f\r:"
 
 /*Constant buffer size to use throughout the program*/
 #define BUFF_SIZE 1024
@@ -36,6 +36,7 @@ int envCmd(char **av, int *exitStat);
 int executeCmd(char **av, int *exitStat);
 
 char *_getLine(void);
+char **getPath(void);
 char **tokenizeInput(char *input);
 
 void getCmd(char **av, int *exitStat);

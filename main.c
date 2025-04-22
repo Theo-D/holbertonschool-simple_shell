@@ -8,7 +8,8 @@
 /*tester avec int argc, char ** argv*/
 int main(void)
 {
-	int exitStat = 0;
+	int exitStat = 0/*, i = 0*/;
+	/*char **pathArr = getPath();*/
 
 	while (1)
 	{
@@ -17,12 +18,14 @@ int main(void)
 
 		cmd = _getLine();
 		av = tokenizeInput(cmd);
-<<<<<<< HEAD
-		getCmd(av);
-=======
 		getCmd(av, &exitStat);
->>>>>>> origin/main
 		freeArr(av);
 	}
+	/*while (pathArr[i])
+	{
+		printf("%s\n", pathArr[i]);
+		i++;
+	}*/
+	/*printf("%s\n", getPath());*/
 	return (exitStat);
 }
