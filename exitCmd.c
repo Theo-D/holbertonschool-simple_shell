@@ -6,9 +6,9 @@
  *
  * Return: 0 on success.
  */
-int exitCmd(char **av, int exitStat)
+int exitCmd(char **av, int *exitStat)
 {
-	exitStat = exitStat;
+	printf("Valeur de exitStat dans exitCmd: %d\n", *exitStat);
 	freeArr(av);
-	exit(0);
+	exit(*exitStat);
 }

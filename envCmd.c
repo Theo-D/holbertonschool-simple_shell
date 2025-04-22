@@ -7,7 +7,7 @@
  * Return: 0 on succes, -1 on failure
  */
 int envCmd(__attribute__((unused))char **av,
-		__attribute__((unused))int exitStat)
+		__attribute__((unused))int *exitStat)
 {
 	int i = 0;
 	char **envCpy;
