@@ -10,5 +10,5 @@ int exitCmd(char **av, int exitStat)
 {
 	exitStat = exitStat;
 	freeArr(av);
-	exit(2);
+	exit(0);
 }
