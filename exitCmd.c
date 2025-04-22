@@ -5,7 +5,7 @@
  *
  * Return: 0 on success.
  */
-int exitCmd(char **av)
+int exitCmd(char **av/*, int exitStat*/)
 {
 	freeArr(av);
 	exit(0);

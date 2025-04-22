@@ -30,6 +30,7 @@ void getCmd(char **av)
 	errFun = -1;
 
 	errFun = executeCmd(av);
+	/*printf("%d\n", errFun);*/
 
 	if (errFun == -1)
 	{

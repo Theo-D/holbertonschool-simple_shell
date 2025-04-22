@@ -8,7 +8,14 @@
 int envCmd(__attribute__((unused))char **av)
 {
 	int i = 0;
-	char **envCpy = environ;
+	char **envCpy;
+
+	if (environ == NULL)
+	{
+		return (-1);
+	}
+
+	envCpy = environ;
 
 	while (envCpy[i])
 	{

@@ -28,8 +28,11 @@ typedef struct inputToCmd{
 	int (*fun)(char **av);
 } cmd_t;
 
+/*Executing built in commands*/
 int exitCmd(char **av);
 int envCmd(char **av);
+
+/*Executing executable files*/
 int executeCmd(char **av);
 
 char *_getLine(void);

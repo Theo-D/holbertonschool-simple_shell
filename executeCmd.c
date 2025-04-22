@@ -8,13 +8,14 @@
  */
 int executeCmd(char **av)
 {
+	/*extern int exitStat;*/
 	pid_t errFork = 0;
 	int  status = 0;
 
 	errFork = fork();
-	if (errFork != 0)
+	if (errFork < 0)
 	{
-		/*fprintf(stderr, "Child process was not created.");*/
+		/*fprintf(stderr, "Child process was not created.");*/;
 		return (-1);
 	}
 	else if (errFork == 0)
@@ -27,8 +28,7 @@ int executeCmd(char **av)
 		{
 			/*fprintf(stderr, "Could not execute command");*/
 			freeArr(av);
-			exit(2);
-			return (-1);
+			return(-1);
 		}
 	}
 	else
@@ -37,8 +37,8 @@ int executeCmd(char **av)
 	 * If fork is successfull the following code will execute in the parent
 	 * process, so we wait the child to terminate.
 	 */
-		waitpid(errFork, &status, 0);
-		WEXITSTATUS(status);
+		wait(&status);
+		/*WEXITSTATUS(status)*/;
 	}
 	return (0);
 }
