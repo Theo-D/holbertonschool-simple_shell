@@ -1,5 +1,4 @@
 <p align="center">
-<img src="https://ml.globenewswire.com/Resource/Download/a08e6c28-55be-44c8-8461-03544f094b38" width="400" height="100">
 <img src="test.jpg">
 </p>
 
@@ -10,6 +9,24 @@
 
 As part of our journey at Holberton School, we teamed up a group of three students to build our own simple shell in C.
 This project was both a fun challenge and a great opportunity to dive deeper into the world of system programming.
+
+## Table of contents 📄
+
+<detail>
+    <summary>
+        Click to enlarge 😇
+    </summary>
+<a href="detailed-description">Detailed Description</a> 📝
+<br>
+<a href="requirements">Requirements</a> ⚠️
+<br>
+<a href="authorized-functions-and-system-calls">Authorized Functions and System Calls</a>  📢
+<br>
+<a href="compilation">Compilation</a> ⚙️
+<br>
+<a href="technologies-&-tools">Technologies & Tools</a> 🧩
+<br>
+<a href="authors">Authors</a> 🤝
 
 ##  Detailed Description 📝
 
@@ -94,3 +111,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 🧑‍💻 Theo Dessaigne : [Theo-D](https://github.com/Theo-D)
 
 🧑‍💻 Louis Manchon : [LouisManchon](https://github.com/LouisManchon)
+
+<p align="center">
+    <img src="https://ml.globenewswire.com/Resource/Download/a08e6c28-55be-44c8-8461-03544f094b38" width="400" height="100">
+<p/>
