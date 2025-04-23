@@ -89,13 +89,13 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 
 ## Tech Stack 🧩
 
-<div style="display: flex; justify-content: center;">
-    <img width="45px" height="50px" src="https://img.shields.io/badge/Vim-019733?style=for-the-badge&logo=vim&logoColor=white">
-    <img width="50px" height="50px" src="https://img.shields.io/badge/Linux-333333?style=for-the-badge&logo=linux&logoColor=white">
-    <img width="50px" height="50px" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
-    <img width="45px" height="50px" src="https://img.shields.io/badge/GCC-343741?style=for-the-badge&logo=gnu&logoColor=white">
-    <img width="45px" height="50px" src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white">
-</div>
+<p align="center">
+    <img src="https://img.shields.io/badge/Vim-019733?style=for-the-badge&logo=vim&logoColor=white" width="70" height="70">
+    <img src="https://img.shields.io/badge/Linux-333333?style=for-the-badge&logo=linux&logoColor=white" width="70" height="70">
+    <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" width="70" height="70">
+    <img src="https://img.shields.io/badge/GCC-343741?style=for-the-badge&logo=gnu&logoColor=white" width="70" height="70">
+    <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" width="70" height="70">
+</p>
 
 ## Authors 🤝
 
