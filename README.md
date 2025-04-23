@@ -100,11 +100,11 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 
 ## Authors 🤝
 
-👨‍💻 Abdellah Dydouh : [azbin-spec](https://github.com/azbin-spec)
+👨‍💻 Abdellah Dydouh : [azbin-spec](https://github.com/azbin-spec) / 9777@holbertonstudents.com
 
-🧑‍💻 Theo Dessaigne : [Theo-D](https://github.com/Theo-D)
+🧑‍💻 Theo Dessaigne : [Theo-D](https://github.com/Theo-D) / 10540@holbertonstudents.com
 
-🧑‍💻 Louis Manchon : [LouisManchon](https://github.com/LouisManchon)
+🧑‍💻 Louis Manchon : [LouisManchon](https://github.com/LouisManchon) / 10578@holbertonstudents.com
 
 <p align="center">
     <img src="https://ml.globenewswire.com/Resource/Download/a08e6c28-55be-44c8-8461-03544f094b38" width="400" height="100">
