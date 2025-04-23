@@ -27,7 +27,7 @@ This project was both a fun challenge and a great opportunity to dive deeper int
 
 In this project, we've built a basic shell in C that mimics the core functionality of Unix shells like Bash. It supports command execution, argument parsing, built-in commands, path searching, and proper error handling in both interactive and non-interactive modes.
 
-## ## Requirements ⚠️
+## Requirements ⚠️
 
 + Allowed editors: vi, vim, emacs
 + All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
@@ -38,7 +38,7 @@ In this project, we've built a basic shell in C that mimics the core functionali
 + No more than 5 functions per file
 + All your header files should be include guarded
 
-## ## Authorized Functions and System Calls 📢
+## Authorized Functions and System Calls 📢
 
 
 ### All functions from string.h 🔐
