@@ -5,7 +5,6 @@
  *
  * Return: 0.
  */
-/*tester avec int argc, char ** argv*/
 int main(void)
 {
 	int exitStat = 0;
