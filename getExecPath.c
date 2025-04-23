@@ -41,8 +41,16 @@ char *getExecPath(char **pathArr, char *cmd)
 			break;
 
 		free(fullPath);
+		fullPath = NULL;
 		i++;
 	}
+	if (fullPath == NULL)
+	{
+		free(cmdToAppend);
+		freeArr(pathArr);
+		return (NULL);
+	}
+
 	free(cmdToAppend);
 	freeArr(pathArr);
 
