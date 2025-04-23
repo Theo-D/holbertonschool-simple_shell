@@ -89,7 +89,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 
 ## Tech Stack 🧩
 
-<div style="display: flex;">
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
 	<img width="45px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png">
     &emsp;
 	<img width="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/1200px-Logo-ubuntu_cof-orange-hex.svg.png">
@@ -97,10 +97,6 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 	<img wigth="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/544px-Vimlogo.svg.png">
     &emsp;
     <img width="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">
-    &emsp;
-    <img width="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/GNU_GCC_logo.svg/1280px-GNU_GCC_logo.svg.png">
-    &emsp;
-    <img width="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Tux.png">
 </div>
 
 ## Authors 🤝
