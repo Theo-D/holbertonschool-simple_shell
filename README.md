@@ -19,7 +19,7 @@ This project was both a fun challenge and a great opportunity to dive deeper int
 - [Requirements ❗](#requirements-)
 - [Authorized Functions and System Calls 📢](#authorized-functions-and-system-calls-)
 - [Compilation 💻](#compilation-)
-- [Tech Stack 🧩](#tech--stack-)
+- [Tech Stack 🧩](#tech-stack-)
 - [Authors 🤝](#authors-)
 </details>
 
@@ -98,6 +98,8 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
     &emsp;
     <!-- Logo GitHub -->
     <img width="45px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">
+    &emsp;
+    <img width="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/GCC_logo.svg">
 </div>
 
 ## Authors 🤝
