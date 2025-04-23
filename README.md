@@ -96,10 +96,11 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 	&emsp;
 	<img wigth="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/544px-Vimlogo.svg.png">
     &emsp;
-    <!-- Logo GitHub -->
-    <img width="45px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">
+    <img width="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png"> <!-- GitHub Logo -->
     &emsp;
     <img width="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/GCC_logo.svg">
+    &emsp;
+    <img width="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tux.svg/200px-Tux.svg.png"> <!-- Linux Logo -->
 </div>
 
 ## Authors 🤝
