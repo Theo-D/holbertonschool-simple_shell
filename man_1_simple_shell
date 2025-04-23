@@ -1,0 +1,50 @@
+.TH SIMPLE_SHELL 1 "April 2025" "Simple Shell Project"
+.SH NAME
+simple_shell \- a simple UNIX command line interpreter
+
+.SH SYNOPSIS
+.B simple_shell
+[\fIcommand\fR]
+
+.SH DESCRIPTION
+The \fBsimple_shell\fR is a basic UNIX command line interpreter developed as part of Holberton's Simple Shell Project. It mimics core functionality of a Unix shell, supporting both built-in and external commands, user input handling, and process management. The shell reads user input, executes commands, and replicates some behaviors of standard UNIX shells.
+
+The following operations are supported:
+- Command parsing
+- Built-in commands (e.g., `env`, `exit`)
+- Execution of external commands
+- Process creation and management using `fork()` and `execve()`
+
+.SH OPTIONS
+\fBsimple_shell\fR does not accept any command-line options.
+
+.SH COMMANDS
+The following built-in commands are supported:
+
+.TP
+.B exit
+Exit the shell. The shell exits with an optional status code. If no status is specified, it exits with status 0. If a status is provided, the shell will exit with that code.
+
+.TP
+.B env
+Print the current environment variables. It outputs the environment variables currently set in the shell.
+
+.SH ENVIRONMENT VARIABLES
+The shell relies on the following environment variable:
+
+.TP
+.B PATH
+A colon-separated list of directories where the shell looks for executable files when running external commands.
+
+.SH USAGE
+To start the simple shell, compile the program with:
+
+.B gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -o simple_shell *.c
+
+Then run the shell with:
+
+.B ./simple_shell
+
+Example usage:
+
+
