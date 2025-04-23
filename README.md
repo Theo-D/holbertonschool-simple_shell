@@ -12,7 +12,7 @@ This project was both a fun challenge and a great opportunity to dive deeper int
 
 ## Table of contents 📄
 
-<detail>
+<details>
     <summary>
         Click to enlarge 😇
     </summary>
@@ -27,12 +27,13 @@ This project was both a fun challenge and a great opportunity to dive deeper int
 <a href="technologies-&-tools">Technologies & Tools</a> 🧩
 <br>
 <a href="authors">Authors</a> 🤝
+</details>
 
-##  Detailed Description 📝
+## <span id="detailed-description">Detailed Description</span> 📝
 
 In this project, we've built a basic shell in C that mimics the core functionality of Unix shells like Bash. It supports command execution, argument parsing, built-in commands, path searching, and proper error handling in both interactive and non-interactive modes.
 
-## Requirements ⚠️
+## <span id="requirements">Requirements</span> ⚠️
 
 + Allowed editors: vi, vim, emacs
 + All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
@@ -43,7 +44,7 @@ In this project, we've built a basic shell in C that mimics the core functionali
 + No more than 5 functions per file
 + All your header files should be include guarded
 
-## Authorized Functions and System Calls 📢
+## <span id="authorized-functions-and-system-calls">Authorized Functions and System Calls</span>  📢
 
 
 
@@ -85,7 +86,7 @@ In this project, we've built a basic shell in C that mimics the core functionali
 + wait4 (man 2 wait4)
 + write (man 2 write)
 
-## Compilation ⚙️
+## <span id="compilation">Compilation</span>  ⚙️
 
 Your project will be compiled on Ubuntu 20.04 LTS using gcc with the following compilation flags  :
 
@@ -93,7 +94,7 @@ Your project will be compiled on Ubuntu 20.04 LTS using gcc with the following c
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 ````
 
-##  Technologies & Tools 🧩
+## <span id="technologies-&-tools">Technologies & Tools</span>  🧩
 
 <p align="center">
     <img src="https://img.shields.io/badge/Vim-019733?style=for-the-badge&logo=vim&logoColor=white">
@@ -104,7 +105,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 </p>
 
 
-## Authors 🤝
+## <span id="authors">Authors</span>  🤝
 
 👨‍💻 Abdellah Dydouh : [azbin-spec](https://github.com/azbin-spec)
 
