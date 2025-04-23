@@ -13,27 +13,21 @@ This project was both a fun challenge and a great opportunity to dive deeper int
 ## Table of contents 📄
 
 <details>
-    <summary>
-        Click to enlarge 😇
-    </summary>
-<a href="detailed-description">Detailed Description</a> 📝
-<br>
-<a href="requirements">Requirements</a> ⚠️
-<br>
-<a href="authorized-functions-and-system-calls">Authorized Functions and System Calls</a>  📢
-<br>
-<a href="compilation">Compilation</a> ⚙️
-<br>
-<a href="technologies-&-tools">Technologies & Tools</a> 🧩
-<br>
-<a href="authors">Authors</a> 🤝
+  <summary>Click to enlarge 😇</summary>
+
+- [Detailed Description 📝](#detailed-description-)
+- [Requirements ⚠️](#requirements-)
+- [Authorized Functions and System Calls 📢](#authorized-functions-and-system-calls-)
+- [Compilation ⚙️](#compilation-)
+- [Technologies & Tools 🧩](#technologies--tools-)
+- [Authors 🤝](#authors-)
 </details>
 
-## <span id="detailed-description">Detailed Description</span> 📝
+## Detailed Description 📝
 
 In this project, we've built a basic shell in C that mimics the core functionality of Unix shells like Bash. It supports command execution, argument parsing, built-in commands, path searching, and proper error handling in both interactive and non-interactive modes.
 
-## <span id="requirements">Requirements</span> ⚠️
+## ## Requirements ⚠️
 
 + Allowed editors: vi, vim, emacs
 + All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
@@ -44,8 +38,7 @@ In this project, we've built a basic shell in C that mimics the core functionali
 + No more than 5 functions per file
 + All your header files should be include guarded
 
-## <span id="authorized-functions-and-system-calls">Authorized Functions and System Calls</span>  📢
-
+## ## Authorized Functions and System Calls 📢
 
 
 ### All functions from string.h 🔐
@@ -86,7 +79,7 @@ In this project, we've built a basic shell in C that mimics the core functionali
 + wait4 (man 2 wait4)
 + write (man 2 write)
 
-## <span id="compilation">Compilation</span>  ⚙️
+## Compilation ⚙️
 
 Your project will be compiled on Ubuntu 20.04 LTS using gcc with the following compilation flags  :
 
@@ -94,7 +87,7 @@ Your project will be compiled on Ubuntu 20.04 LTS using gcc with the following c
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 ````
 
-## <span id="technologies-&-tools">Technologies & Tools</span>  🧩
+## Technologies & Tools 🧩
 
 <p align="center">
     <img src="https://img.shields.io/badge/Vim-019733?style=for-the-badge&logo=vim&logoColor=white">
@@ -105,7 +98,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 </p>
 
 
-## <span id="authors">Authors</span>  🤝
+## Authors 🤝
 
 👨‍💻 Abdellah Dydouh : [azbin-spec](https://github.com/azbin-spec)
 
