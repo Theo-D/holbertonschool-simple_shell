@@ -18,7 +18,7 @@ This project was both a fun challenge and a great opportunity to dive deeper int
 - [Detailed Description 📝](#detailed-description-)
 - [Requirements ❗](#requirements-)
 - [Authorized Functions and System Calls 📢](#authorized-functions-and-system-calls-)
-- [Compilation 🛠️](#compilation-)
+- [Compilation 💻](#compilation-)
 - [Technologies & Tools 🧩](#technologies--tools-)
 - [Authors 🤝](#authors-)
 </details>
@@ -79,7 +79,7 @@ In this project, we've built a basic shell in C that mimics the core functionali
 + wait4 (man 2 wait4)
 + write (man 2 write)
 
-## Compilation 🛠️
+## Compilation 💻
 
 Your project will be compiled on Ubuntu 20.04 LTS using gcc with the following compilation flags  :
 
