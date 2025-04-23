@@ -89,13 +89,16 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 
 ## Tech Stack 🧩
 
-<p align="center">
-    <img src="https://img.shields.io/badge/Vim-019733?style=for-the-badge&logo=vim&logoColor=white" width="70" height="70">
-    <img src="https://img.shields.io/badge/Linux-333333?style=for-the-badge&logo=linux&logoColor=white" width="70" height="70">
-    <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" width="70" height="70">
-    <img src="https://img.shields.io/badge/GCC-343741?style=for-the-badge&logo=gnu&logoColor=white" width="70" height="70">
-    <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" width="70" height="70">
-</p>
+<div style="display: flex;">
+	<img width="45px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png">
+    &emsp;
+	<img width="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/1200px-Logo-ubuntu_cof-orange-hex.svg.png">
+	&emsp;
+	<img wigth="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/544px-Vimlogo.svg.png">
+    &emsp;
+    <img width="45px" height="50px"
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png">
+</div>
 
 ## Authors 🤝
 
