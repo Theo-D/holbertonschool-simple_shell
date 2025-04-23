@@ -25,7 +25,7 @@ char *getExecPath(char **pathArr, char *cmd)
 
 	while (*pathArr != NULL)
 	{
-		fullPath = malloc((strlen(pathArr[i] * sizeof(char))) + (strlen(cmdToAppend) + 1));
+		fullPath = malloc((strlen(pathArr[i]) * sizeof(char)) + (strlen(cmdToAppend) + 1));
 
 		if(fullPath == NULL)
 		{

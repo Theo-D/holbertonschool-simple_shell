@@ -5,13 +5,13 @@
 char **getPath(void)
 {
 	char **envCpy;
-	char path[5] = "PATH";
-	char *subStr = malloc(strlen(path) * sizeof(char));
+	char *path = "PATH";
+	char *subStr = strdup(path);
 	char *pathLine;
-	char **pathArr = malloc(BUFF_SIZE);
+	char **pathArr = NULL;
 	int i = 0, lineLen = 0;
 
-	if (environ == NULL || subStr == NULL || pathArr == NULL)
+	if (environ == NULL || subStr == NULL)
 		exit(2);
 
 	envCpy = environ;
@@ -19,7 +19,7 @@ char **getPath(void)
 	while (*envCpy != NULL)
 	{
 		strncpy(subStr, envCpy[i], 4);
-		subStr[5] = '\0';
+		subStr[4] = '\0';
 
 		if (strcmp(subStr, path) == 0)
 			break;
@@ -29,8 +29,9 @@ char **getPath(void)
 	free(subStr);
 	
 	lineLen = strlen(envCpy[i]);
-	pathLine = malloc((lineLen * sizeof(char)) - 5);
-	strncpy(pathLine, envCpy[i] + 5, (lineLen - 5));
+	pathLine = malloc((lineLen - 5) + 1);
+	strncpy(pathLine, envCpy[i] + 5, lineLen - 5);
+	pathLine[lineLen - 5] = '\0';
 
 	if (pathLine == NULL)
 		exit (2);

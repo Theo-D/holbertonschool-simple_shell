@@ -36,6 +36,7 @@ int envCmd(char **av, int *exitStat);
 int executeCmd(char **av, int *exitStat);
 
 char *_getLine(void);
+char *getExecPath(char **pathArr, char *cmd);
 char **getPath(void);
 char **tokenizeInput(char *input);
 
