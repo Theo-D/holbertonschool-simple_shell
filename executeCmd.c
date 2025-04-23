@@ -9,38 +9,53 @@
  */
 int executeCmd(char **av, int *exitStat)
 {
-	pid_t errFork = 0;
+	pid_t pidFork = 0;
 	int  status = 0;
+	char **path = getPath();
+	char *execPath = NULL;
 
-	errFork = fork();
-
-	if (errFork < 0)
-	{
-		/*fprintf(stderr, "Child process was not created.");*/
+	if (*path == NULL)
 		return (-1);
-	}
-	else if (errFork == 0)
+
+	execPath = getExecPath(path, av[0]);
+
+	if (execPath != NULL)
 	{
-		/**
-		 * fork should be successful here, we are in the child process
-		 * so we execute the file named after the command.
-		 */
-		if (execve(av[0], av, environ) == -1)
+		pidFork = fork();
+		
+		if (pidFork < 0)
 		{
-			/*fprintf(stderr, "Could not execute command");*/
-			freeArr(av);
 			return (-1);
 		}
+		else if (pidFork == 0)
+		{
+			/**
+		 	* fork should be successful here, we are in the child process
+		 	* so we execute the file named after the command.
+		 	*/
+			if (execve(execPath, av, environ) == -1)
+			{
+				freeArr(av);
+				free(execPath);
+				return (-1);
+			}
+		}
+		else
+		{
+		/**
+	 	* If fork is successfull the following code will execute in the parent
+	 	* process, so we wait the child to terminate.
+	 	*/
+			wait(&status);
+			*exitStat = WEXITSTATUS(status);
+		}
+		free(execPath);
+		return (0);
 	}
 	else
 	{
-	/**
-	 * If fork is successfull the following code will execute in the parent
-	 * process, so we wait the child to terminate.
-	 */
-		wait(&status);
-		*exitStat = WEXITSTATUS(status);
+		freeArr(av);
+		free(execPath);
+		return (-1);
 	}
-
-	return (0);
 }
