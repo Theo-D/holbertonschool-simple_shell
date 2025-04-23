@@ -17,7 +17,10 @@ int executeCmd(char **av, int *exitStat)
 	if (*path == NULL)
 		return (-1);
 
-	execPath = getExecPath(path, av[0]);
+	if (av[0][0] == '/')
+		execPath = strdup(av[0]);
+	else
+		execPath = getExecPath(path, av[0]);
 
 	if (execPath != NULL)
 	{
@@ -29,10 +32,6 @@ int executeCmd(char **av, int *exitStat)
 		}
 		else if (pidFork == 0)
 		{
-			/**
-		 	* fork should be successful here, we are in the child process
-		 	* so we execute the file named after the command.
-		 	*/
 			if (execve(execPath, av, environ) == -1)
 			{
 				freeArr(av);
@@ -42,10 +41,6 @@ int executeCmd(char **av, int *exitStat)
 		}
 		else
 		{
-		/**
-	 	* If fork is successfull the following code will execute in the parent
-	 	* process, so we wait the child to terminate.
-	 	*/
 			wait(&status);
 			*exitStat = WEXITSTATUS(status);
 		}
