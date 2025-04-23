@@ -10,7 +10,7 @@ char *_getLine(void)
 	/*char *currentDir;*/
 	/*char cwd[BUFF_SIZE];*/
 	size_t strSize;
-	int charCount;
+	ssize_t charCount;
 
 	/**
 	 * currentDir = getcwd(cwd, BUFF_SIZE);
@@ -18,7 +18,7 @@ char *_getLine(void)
 	 *	printf("%s($)", currentDir);
 	 * else
 	 */
-	if (isatty(1))
+	if (isatty(STDIN_FILENO))
 		printf("($)");
 	 /**
 	 * Initialize string to NULL for getLine() to allocate memory under
@@ -31,8 +31,7 @@ char *_getLine(void)
 	{
 		/*fprintf(stderr, "Error or EoF\n");*/
 		free(line);
-		exit(EXIT_FAILURE);
-		/*return (-1); Fix infinite printing of string*/
+		exit(0);
 	}
 	return (line);
 }

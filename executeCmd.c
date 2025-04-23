@@ -3,49 +3,59 @@
  * executeCmd - Handles creation of child process to execute function
  * input by user.
  * @av: array of string reprensenting command input by user.
+ * @exitStat: integer to follow the value of exit status.
  *
  * Return: 0 on succes, -1 on failure.
  */
-int executeCmd(char **av)
+int executeCmd(char **av, int *exitStat)
 {
-	pid_t errFork = 0;
+	pid_t pidFork = 0;
 	int  status = 0;
+	char **path = getPath();
+	char *execPath = NULL;
 
-	if (av == NULL || av[0] == NULL)
-	{
-		freeArr(av);
-		exit(EXIT_FAILURE);
-	}
+	if (*path == NULL)
+		return (-1);
 
-	errFork = fork();
+	execPath = getExecPath(path, av[0]);
 
-	if (errFork < 0)
+	if (execPath != NULL)
 	{
-		freeArr(av);
-		perror("Child process was not created.");
-		exit(-1);
-	}
-	else if (errFork == 0)
-	{
-		/**
-		 * fork should be successful here, we are inthe child process
-		 * so we execute the file named after the command.
-		 */
-		if (execve(av[0], av, environ) == -1)
+		pidFork = fork();
+		
+		if (pidFork < 0)
 		{
-			freeArr(av);
-			perror("Could not execute command");
-			exit(-1);
+			return (-1);
 		}
+		else if (pidFork == 0)
+		{
+			/**
+		 	* fork should be successful here, we are in the child process
+		 	* so we execute the file named after the command.
+		 	*/
+			if (execve(execPath, av, environ) == -1)
+			{
+				freeArr(av);
+				free(execPath);
+				return (-1);
+			}
+		}
+		else
+		{
+		/**
+	 	* If fork is successfull the following code will execute in the parent
+	 	* process, so we wait the child to terminate.
+	 	*/
+			wait(&status);
+			*exitStat = WEXITSTATUS(status);
+		}
+		free(execPath);
+		return (0);
 	}
 	else
 	{
-	/**
-	 * If fork is successfull the following code will execute in the parent
-	 * process, so we wait the child to terminate.
-	 */
-		wait(&status);
-		/*equivalent to waitpid(errFork, &status, 0)*/
+		freeArr(av);
+		free(execPath);
+		return (-1);
 	}
-	return (0);
 }
