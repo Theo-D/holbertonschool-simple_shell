@@ -9,7 +9,7 @@
  */
 void getCmd(char **av, int *exitStat)
 {
-	int i = 0/*, errFun = 0*/;
+	int i = 0;
 	cmd_t cmdFunc[] = {
 		{"env", envCmd},
 		{"exit", exitCmd},
@@ -28,14 +28,5 @@ void getCmd(char **av, int *exitStat)
 		}
 		i++;
 	}
-	/*errFun = -1;*/
-
-	/*errFun = */executeCmd(av, exitStat);
-	/*printf("valeur de exitStat après executeCmd: %d\n", *exitStat);*/
-
-	/*if (errFun == -1)
-	{
-
-		exitCmd(av, *exitStat);
-	}*/
+	executeCmd(av, exitStat);
 }
