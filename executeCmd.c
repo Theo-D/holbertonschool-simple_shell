@@ -10,19 +10,20 @@
 int executeCmd(char **av, int *exitStat)
 {	pid_t pidFork = 0;
 	int  status = 0, errTrack = 0;
-	char **path = getPath(), *execPath = NULL;
+	char **path, *execPath = NULL;
 
-	if (*path == NULL)
+	/*if (*path == NULL)
 	{	freeArr(path);
 		return (-1);
-	}
+	}*/
 	if (av[0][0] == '/' || av[0][0] == '.')
-	{	execPath = strdup(av[0]);
-		freeArr(path);
-	}
+		execPath = strdup(av[0]);
 	else
+	{
+		path = getPath();
 		execPath = getExecPath(path, av[0]);
-	path = NULL;
+		path = NULL;
+	}
 	if (execPath != NULL)
 	{	errTrack = checkAccess(execPath);
 		if (errTrack < 0)
