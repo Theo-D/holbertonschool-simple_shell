@@ -24,7 +24,7 @@ int executeCmd(char **av, int *exitStat)
 		execPath = getExecPath(path, av[0]);
 		if (path == NULL || execPath == NULL)
 		{
-			fprintf(stderr, "./hsh: 1: %s: not found", av[0]);
+			fprintf(stderr, "./hsh: 1: %s: not found\n", av[0]);
 			freeArr(path);
 			return (-3);
 		}
