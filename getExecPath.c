@@ -17,7 +17,7 @@ char *getExecPath(char **pathArr, char *cmd)
 	{
 		free(cmdToAppend);
 		freeArr(pathArr);
-		exit(2);
+		return (NULL);
 	}
 	strcpy(cmdToAppend, "/");
 	strcat(cmdToAppend, cmd);
@@ -29,7 +29,7 @@ char *getExecPath(char **pathArr, char *cmd)
 		{
 			free(fullPath);
 			free(cmdToAppend);
-			exit(2);
+			return (NULL);
 		}
 		strcpy(fullPath, pathArr[i]);
 		strcat(fullPath, cmdToAppend);
