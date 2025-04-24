@@ -45,6 +45,14 @@ Then run the shell with:
 
 .B ./simple_shell
 
-Example usage:
+.SH AUTHORS
+Abdellah Dydouh : azbin-spec / 9777@holbertonstudents.com
+
+Theo Dessaigne : Theo-D / 10540@holbertonstudents.com
+
+Louis Manchon : LouisManchon / 10578@holbertonstudents.com
+
+.SH COPYRIGHT
+This manual page was written for the Simple Shell Project by Abdellah dydouh. All rights reserved.
 
 
