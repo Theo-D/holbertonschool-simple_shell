@@ -16,7 +16,7 @@ int main(void)
 		int errTrack = 0;
 
 		cmd = _getLine();
-		av = tokenizeInput(cmd);
+		av = tokenizeInput(cmd, SEP);
 		errTrack = getCmd(av, &exitStat);
 		freeArr(av);
 		exitHandler(errTrack);

@@ -29,9 +29,6 @@ char **getPath(void)
 	}
 
 	free(subStr);
-	
-	if (envCpy[i] == NULL)
-		return (NULL);
 
 	lineLen = strlen(envCpy[i]);
 	pathLine = malloc((lineLen - 5) + 1);
@@ -41,7 +38,7 @@ char **getPath(void)
 	if (pathLine == NULL)
 		return (NULL);
 
-	pathArr = tokenizeInput(pathLine);
+	pathArr = tokenizeInput(pathLine, SEP);
 
 	return (pathArr);
 }

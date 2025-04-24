@@ -38,7 +38,7 @@ int executeCmd(char **av, int *exitStat);
 char *_getLine(void);
 char *getExecPath(char **pathArr, char *cmd);
 char **getPath(void);
-char **tokenizeInput(char *input);
+char **tokenizeInput(char *input, char *sep);
 
 int checkAccess(char *execPath);
 int getCmd(char **av, int *exitStat);

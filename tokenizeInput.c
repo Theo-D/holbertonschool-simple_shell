@@ -6,11 +6,11 @@
  *
  * Return: Array of strings.
  */
-char **tokenizeInput(char *line)
+char **tokenizeInput(char *line, char *sep)
 {
 	size_t buff = BUFF_SIZE, i = 0;
 	char *newLine = strdup(line);
-	char *token = strtok(newLine, SEP);
+	char *token = strtok(newLine, sep);
 	char **tokenArr = malloc(buff * sizeof(char *));
 
 	if (line == NULL)
@@ -36,7 +36,7 @@ char **tokenizeInput(char *line)
 		*}
 		*/
 		tokenArr[i] = strdup(token);
-		token = strtok(NULL, SEP);
+		token = strtok(NULL, sep);
 		i++;
 	}
 	tokenArr[i] = '\0';
