@@ -13,13 +13,10 @@ char **getPath(void)
 	char **pathArr = NULL;
 	int i = 0, lineLen = 0;
 
-	if (environ == NULL || subStr == NULL)
+	if (environ == NULL || environ[0] == NULL || subStr == NULL)
 		return (NULL);
 
 	envCpy = environ;
-
-	if (strlen(envCpy[i]) == 0)
-		return (NULL);
 
 	while (*envCpy != NULL)
 	{
