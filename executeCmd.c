@@ -13,16 +13,20 @@ int executeCmd(char **av, int *exitStat)
 	char **path = getPath(), *execPath = NULL;
 
 	if (*path == NULL)
+	{	freeArr(path);
 		return (-1);
+	}
 	if (av[0][0] == '/')
-		execPath = strdup(av[0]);
+	{	execPath = strdup(av[0]);
+		freeArr(path);
+	}
 	else
 		execPath = getExecPath(path, av[0]);
+	path = NULL;
 	if (execPath != NULL)
 	{	errTrack = checkAccess(execPath);
 		if (errTrack < 0)
 		{	free(execPath);
-			freeArr(path);
 			return (errTrack);
 		}
 		pidFork = fork();
@@ -40,7 +44,6 @@ int executeCmd(char **av, int *exitStat)
 		{	wait(&status);
 			*exitStat = WEXITSTATUS(status);
 		}
-		freeArr(path);
 		free(execPath);
 		return (0);
 	}
