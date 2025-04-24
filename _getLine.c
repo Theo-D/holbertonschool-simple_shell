@@ -14,7 +14,7 @@ char *_getLine(void)
 		printf("($)");
 	 /**
 	 * Initialize string to NULL for getLine() to allocate memory under
-	 * the hood
+	 * automatically.
 	 */
 	line = NULL;
 	charCount = getline(&line, &strSize, stdin);

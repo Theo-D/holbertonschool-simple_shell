@@ -32,6 +32,7 @@ char **tokenizeInput(char *line, char *sep)
 
 	return (tokenArr);
 }
+
 /**
  * exitHandler - Handles exit status according to received error tracking
  * variable.
@@ -42,6 +43,7 @@ void exitHandler(int errTrack)
 	if (errTrack == -3)
 		exit(127);
 }
+
 /**
  * freeArr - Frees array of string.
  * @av: Array to be freed.
@@ -59,6 +61,7 @@ void freeArr(char **av)
 	}
 	free(av);
 }
+
 /**
  * checkAccess - Checks if file is accessible at given path.
  * @execPath: Path of the file to be accessed.

@@ -12,19 +12,13 @@ int executeCmd(char **av, int *exitStat)
 	int  status = 0, errTrack = 0;
 	char **path, *execPath = NULL;
 
-	/*if (*path == NULL)
-	{	freeArr(path);
-		return (-1);
-	}*/
 	if (av[0][0] == '/' || av[0][0] == '.')
 		execPath = strdup(av[0]);
 	else
-	{
-		path = getPath();
+	{	path = getPath();
 		execPath = getExecPath(path, av[0]);
 		if (path == NULL || execPath == NULL)
-		{
-			fprintf(stderr, "./hsh: 1: %s: not found\n", av[0]);
+		{	fprintf(stderr, "./hsh: 1: %s: not found\n", av[0]);
 			return (-3);
 		}
 		path = NULL;
