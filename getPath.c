@@ -18,7 +18,7 @@ char **getPath(void)
 
 	envCpy = environ;
 
-	while (*envCpy != NULL)
+	while (envCpy[i] != NULL)
 	{
 		strncpy(subStr, envCpy[i], 4);
 		subStr[4] = '\0';
@@ -29,6 +29,9 @@ char **getPath(void)
 	}
 
 	free(subStr);
+	
+	if (envCpy[i] == NULL)
+		return (NULL);
 
 	lineLen = strlen(envCpy[i]);
 	pathLine = malloc((lineLen - 5) + 1);
