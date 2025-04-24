@@ -16,7 +16,7 @@ int executeCmd(char **av, int *exitStat)
 	{	freeArr(path);
 		return (-1);
 	}
-	if (av[0][0] == '/')
+	if (av[0][0] == '/' || av[0][0] == '.')
 	{	execPath = strdup(av[0]);
 		freeArr(path);
 	}
