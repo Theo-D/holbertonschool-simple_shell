@@ -21,11 +21,11 @@ int executeCmd(char **av, int *exitStat)
 	else
 	{
 		path = getPath();
-		if (path[0][0] == '2')
+		/*Tester avec strcmp*/
+		if (path == NULL)
 		{
 			fprintf(stderr, "./hsh: 1: %s: not found", av[0]);
 			freeArr(path);
-			path = NULL;
 			return (-3);
 		}
 		execPath = getExecPath(path, av[0]);
