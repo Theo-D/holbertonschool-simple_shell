@@ -17,29 +17,24 @@ char *getExecPath(char **pathArr, char *cmd)
 	{
 		free(cmdToAppend);
 		freeArr(pathArr);
-		exit (2);
+		exit(2);
 	}
-
 	strcpy(cmdToAppend, "/");
 	strcat(cmdToAppend, cmd);
-
 	while (*pathArr != NULL)
 	{
-		fullPath = malloc((strlen(pathArr[i]) * sizeof(char)) + (strlen(cmdToAppend) + 1));
-
-		if(fullPath == NULL)
+		fullPath = malloc((strlen(pathArr[i]) * sizeof(char)) +
+				(strlen(cmdToAppend) + 1));
+		if (fullPath == NULL)
 		{
 			free(fullPath);
 			free(cmdToAppend);
-			exit (2);
+			exit(2);
 		}
-
 		strcpy(fullPath, pathArr[i]);
 		strcat(fullPath, cmdToAppend);
-
 		if (access(fullPath, F_OK) == 0)
 			break;
-
 		free(fullPath);
 		fullPath = NULL;
 		i++;
@@ -50,9 +45,8 @@ char *getExecPath(char **pathArr, char *cmd)
 		freeArr(pathArr);
 		return (NULL);
 	}
-
 	free(cmdToAppend);
 	freeArr(pathArr);
 
-	return(fullPath);
+	return (fullPath);
 }

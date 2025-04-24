@@ -1,6 +1,8 @@
 #include "shell.h"
 /**
+ * getPath - Parses and return PATH line from **environ as an array of strings.
  *
+ * Return: An array of strings each containing a directory from PATH.
  */
 char **getPath(void)
 {
@@ -27,14 +29,14 @@ char **getPath(void)
 	}
 
 	free(subStr);
-	
+
 	lineLen = strlen(envCpy[i]);
 	pathLine = malloc((lineLen - 5) + 1);
 	strncpy(pathLine, envCpy[i] + 5, lineLen - 5);
 	pathLine[lineLen - 5] = '\0';
 
 	if (pathLine == NULL)
-		exit (2);
+		exit(2);
 
 	pathArr = tokenizeInput(pathLine);
 

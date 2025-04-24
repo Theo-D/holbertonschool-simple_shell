@@ -7,9 +7,10 @@
  *
  * Return: Nothing.
  */
-void getCmd(char **av, int *exitStat)
+int getCmd(char **av, int *exitStat)
 {
-	int i = 0/*, errFun = 0*/;
+	int i = 0;
+	int errTrack = 0;
 	cmd_t cmdFunc[] = {
 		{"env", envCmd},
 		{"exit", exitCmd},
@@ -17,25 +18,18 @@ void getCmd(char **av, int *exitStat)
 	};
 
 	if (av == NULL || av[0] == NULL)
-		return;
+		return (-1);
 
 	while (cmdFunc[i].cmd != NULL)
 	{
 		if (strcmp(cmdFunc[i].cmd, av[0]) == 0)
 		{
 			cmdFunc[i].fun(av, exitStat);
-			return;
+			return (-1);
 		}
 		i++;
 	}
-	/*errFun = -1;*/
+	errTrack = executeCmd(av, exitStat);
 
-	/*errFun = */executeCmd(av, exitStat);
-	/*printf("valeur de exitStat après executeCmd: %d\n", *exitStat);*/
-
-	/*if (errFun == -1)
-	{
-
-		exitCmd(av, *exitStat);
-	}*/
+	return (errTrack);
 }
