@@ -15,7 +15,7 @@ char **getPath(void)
 
 	if (environ == NULL || environ[0] == NULL || subStr == NULL)
 		return (NULL);
-	fprintf(stderr, "getPath didn't return NULL");
+
 	envCpy = environ;
 
 	while (*envCpy != NULL)
