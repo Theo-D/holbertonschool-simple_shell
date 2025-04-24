@@ -18,6 +18,9 @@ char **getPath(void)
 
 	envCpy = environ;
 
+	if (strlen(envCpy[i]) == 0)
+		return (NULL);
+
 	while (*envCpy != NULL)
 	{
 		strncpy(subStr, envCpy[i], 4);
