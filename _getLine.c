@@ -7,17 +7,9 @@
 char *_getLine(void)
 {
 	char *line;
-	/*char *currentDir;*/
-	/*char cwd[BUFF_SIZE];*/
 	size_t strSize;
 	ssize_t charCount;
 
-	/**
-	 * currentDir = getcwd(cwd, BUFF_SIZE);
-	 * if (currentDir != NULL)
-	 *	printf("%s($)", currentDir);
-	 * else
-	 */
 	if (isatty(STDIN_FILENO))
 		printf("($)");
 	 /**
@@ -29,7 +21,6 @@ char *_getLine(void)
 
 	if (charCount == -1)
 	{
-		/*fprintf(stderr, "Error or EoF\n");*/
 		free(line);
 		exit(0);
 	}

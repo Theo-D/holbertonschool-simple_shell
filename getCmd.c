@@ -7,9 +7,10 @@
  *
  * Return: Nothing.
  */
-void getCmd(char **av, int *exitStat)
+int getCmd(char **av, int *exitStat)
 {
 	int i = 0;
+	int errTrack = 0;
 	cmd_t cmdFunc[] = {
 		{"env", envCmd},
 		{"exit", exitCmd},
@@ -17,16 +18,18 @@ void getCmd(char **av, int *exitStat)
 	};
 
 	if (av == NULL || av[0] == NULL)
-		return;
+		return (-1);
 
 	while (cmdFunc[i].cmd != NULL)
 	{
 		if (strcmp(cmdFunc[i].cmd, av[0]) == 0)
 		{
 			cmdFunc[i].fun(av, exitStat);
-			return;
+			return (-1);
 		}
 		i++;
 	}
-	executeCmd(av, exitStat);
+	errTrack = executeCmd(av, exitStat);
+
+	return (errTrack);
 }

@@ -40,6 +40,9 @@ char *getExecPath(char **pathArr, char *cmd);
 char **getPath(void);
 char **tokenizeInput(char *input);
 
-void getCmd(char **av, int *exitStat);
+int checkAccess(char *execPath);
+int getCmd(char **av, int *exitStat);
+
+void exitHandler(int errTRack);
 
 #endif

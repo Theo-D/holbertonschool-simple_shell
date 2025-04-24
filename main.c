@@ -13,11 +13,13 @@ int main(void)
 	{
 		char *cmd;
 		char **av;
+		int errTrack = 0;
 
 		cmd = _getLine();
 		av = tokenizeInput(cmd);
-		getCmd(av, &exitStat);
+		errTrack = getCmd(av, &exitStat);
 		freeArr(av);
+		exitHandler(errTrack);
 	}
 	return (exitStat);
 }
