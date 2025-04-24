@@ -19,6 +19,7 @@ This project was both a fun challenge and a great opportunity to dive deeper int
 - [Requirements ❗](#requirements-)
 - [Authorized Functions and System Calls 📢](#authorized-functions-and-system-calls-)
 - [Compilation 💻](#compilation-)
+- [Files Description 🔗](#files-description-)
 - [Tech Stack 🧩](#tech-stack-)
 - [Authors 🤝](#authors-)
 </details>
@@ -86,6 +87,25 @@ Your project will be compiled on Ubuntu 20.04 LTS using gcc with the following c
 ````
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 ````
+
+## Files Description 🔗
+
+|              File                  |                                            Description                                                       |
+|:---------------------------------: | :----------------------------------------------------------------------------------------------------------: |
+|           README.md                |                                     This file is the README.md                                               | 
+|           _getLine.c               |                                Reads a line of input from the user using getline                             |
+|           envCmd.c                 |                                   Displays all environment variables                                         |
+|           executeCmd.c             |                                Executes user commands using a child process                                  |
+|           exitCmd.c                |                      Handles shell exit and frees memory before terminating with a given status              |                   
+|           freeArr.c                |                              Frees a dynamically allocated array of strings                                  |
+|           getCmd.c                 |                     Checks for built-in commands and executes them, or calls executeCmd for others           |
+|           getExecPath.c            |  Builds and returns the full path to an executable by searching through PATH directories                     |
+|           getPath.c                |         Extracts the system PATH variable and splits it into an array of directories                         |
+|           main.c                   |     Main shell loop: reads input, tokenizes it, and executes commands                                        |
+|           shell.h                  |   Header file with macros, libraries, function prototypes, and structs used throughout the shell             |
+|           test.jpg                 |                                       Image for the README                                                   |
+|           tokenizeInput.c          |                              Breaks a string into tokens and returns an array of strings                     |
+
 
 ## Tech Stack 🧩
 
