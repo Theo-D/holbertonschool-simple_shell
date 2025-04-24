@@ -80,6 +80,19 @@ In this project, we've built a basic shell in C that mimics the core functionali
 + wait4 (man 2 wait4)
 + write (man 2 write)
 
+## Testing and Output : 
+
+![fork_-_execve_-_wait](https://github.com/user-attachments/assets/e2179b67-691b-4426-9807-bb001a0093ef)
+![execution_of_builtin_or_executable](https://github.com/user-attachments/assets/10e9e1af-b4c6-4553-9a0b-db07f60fced0)
+![main c_topology](https://github.com/user-attachments/assets/be020504-f65a-4144-982f-19038485fee2)
+![simple_shell_output](https://github.com/user-attachments/assets/d8ac1c28-ecdb-49d1-962b-461bc2656168)
+
+
+
+
+
+
+
 ## Compilation 💻
 
 Your project will be compiled on Ubuntu 20.04 LTS using gcc with the following compilation flags  :
