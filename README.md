@@ -19,6 +19,7 @@ This project was both a fun challenge and a great opportunity to dive deeper int
 - [Requirements ❗](#requirements-)
 - [Authorized Functions and System Calls 📢](#authorized-functions-and-system-calls-)
 - [Compilation 💻](#compilation-)
+- [Files Description 🏷️](#files-description)
 - [Tech Stack 🧩](#tech-stack-)
 - [Authors 🤝](#authors-)
 </details>
@@ -86,6 +87,17 @@ Your project will be compiled on Ubuntu 20.04 LTS using gcc with the following c
 ````
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 ````
+
+## Files Description 🏷️
+
+|        File     |                       Description                        |
+|:--------------: | :------------------------------------------------------: |
+|   README.md     |        This file is the README.md                        | 
+|   _getLine.c    | Reads a line of input from the user using getline()      |
+|   envCmd.c      |       Displays all environment variables                 |
+|   executeCmd.c  | Executes user commands using a child process             |
+
+
 
 ## Tech Stack 🧩
 
