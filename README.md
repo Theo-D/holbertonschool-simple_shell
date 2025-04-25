@@ -103,8 +103,9 @@ In this project, we've built a basic shell in C that mimics the core functionali
 ## Flowchart : 
 
 
-![Flowchart_simple_shell1 drawio](https://github.com/user-attachments/assets/1fb4b362-7a65-4cf3-96e4-6e67843ec671)
 
+
+![Flowchart_simple_shell1_enhanced](https://github.com/user-attachments/assets/dd0032a3-f16d-4e50-b3db-90f4f8d12c8f)
 
 
 
