@@ -100,7 +100,10 @@ In this project, we've built a basic shell in C that mimics the core functionali
 ![simple_shell_output](https://github.com/user-attachments/assets/d8ac1c28-ecdb-49d1-962b-461bc2656168)
 
 
+## Flowchart : 
 
+
+![Flowchart_simple_shell1 drawio](https://github.com/user-attachments/assets/1fb4b362-7a65-4cf3-96e4-6e67843ec671)
 
 
 
