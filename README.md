@@ -80,7 +80,7 @@ In this project, we've built a basic shell in C that mimics the core functionali
 + wait4 (man 2 wait4)
 + write (man 2 write)
 
-## Testing and Output : 
+##  Source code and Output : 
 
 #### A Peek at the main file:
 ![main c_topology](https://github.com/user-attachments/assets/be020504-f65a-4144-982f-19038485fee2)
@@ -103,9 +103,8 @@ In this project, we've built a basic shell in C that mimics the core functionali
 ## Flowchart : 
 
 
+![Flowchart_simple_shell1_enhanced(1)](https://github.com/user-attachments/assets/67e63cf2-f6ac-412d-b70a-44266c36f3a9)
 
-
-![Flowchart_simple_shell1_enhanced](https://github.com/user-attachments/assets/dd0032a3-f16d-4e50-b3db-90f4f8d12c8f)
 
 
 
