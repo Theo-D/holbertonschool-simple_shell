@@ -39,7 +39,7 @@ A colon-separated list of directories where the shell looks for executable files
 .SH USAGE
 To start the simple shell, compile the program with:
 
-.B gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -o simple_shell *.c
+.B gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 Then run the shell with:
 
