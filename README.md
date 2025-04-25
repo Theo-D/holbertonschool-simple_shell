@@ -87,12 +87,12 @@ In this project, we've built a basic shell in C that mimics the core functionali
 
 
 
-#### How is the distinction between builtins and executables is handled:
+#### How the distinction between builtins and executables is handled:
 ![execution_of_builtin_or_executable](https://github.com/user-attachments/assets/10e9e1af-b4c6-4553-9a0b-db07f60fced0)
 
 
 
-#### In case of commande refering to an executable; the process of forking, executing and waiting ofr the child:
+#### In case of command refering to an executable; the process of forking, executing and waiting ofr the child:
 ![forkexecvewait](https://github.com/user-attachments/assets/e2179b67-691b-4426-9807-bb001a0093ef)
 
 
@@ -120,19 +120,28 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 
 |              File                  |                                            Description                                                       |
 |:---------------------------------: | :----------------------------------------------------------------------------------------------------------: |
-|           README.md                |                                     This file is the README.md                                               | 
-|           _getLine.c               |                                Reads a line of input from the user using getline                             |
-|           envCmd.c                 |                                   Displays all environment variables                                         |
-|           executeCmd.c             |                                Executes user commands using a child process                                  |
-|           exitCmd.c                |                      Handles shell exit and frees memory before terminating with a given status              |                   
-|           freeArr.c                |                              Frees a dynamically allocated array of strings                                  |
-|           getCmd.c                 |                     Checks for built-in commands and executes them, or calls executeCmd for others           |
-|           getExecPath.c            |  Builds and returns the full path to an executable by searching through PATH directories                     |
-|           getPath.c                |         Extracts the system PATH variable and splits it into an array of directories                         |
-|           main.c                   |     Main shell loop: reads input, tokenizes it, and executes commands                                        |
+|           README.md                |                                     This file is the README.md                                               |
 |           shell.h                  |   Header file with macros, libraries, function prototypes, and structs used throughout the shell             |
-|           test.jpg                 |                                       Image for the README                                                   |
-|           tokenizeInput.c          |                              Breaks a string into tokens and returns an array of strings                     |
+|           main.c                   |     Main shell loop: reads input, tokenizes it, and executes commands                                        | 
+|           _getLine.c               |                                Reads a line of input from the user using getline                             |
+|           getCmd.c                 |                     Checks for built-in commands and executes them, or calls executeCmd for others           |
+|           executeCmd.c             |                                Executes user commands using a child process                                  |
+|           getPath.c                |         Extracts the system PATH variable and splits it into an array of directories                         |
+|           getExecPath.c            |  Builds and returns the full path to an executable by searching through PATH directories                     |
+
+
+|           builtins.c               |         Contains the definition for the following functions that execute builtin commands:                   |
+|:---------------------------------: | :----------------------------------------------------------------------------------------------------------: |
+|           envCmd()                 |                                   Displays all environment variables                                         |
+|           exitCmd()                |                      Handles shell exit and frees memory before terminating with a given status              |
+
+
+|           helper.c                 |                         Contains the definition for the following helper functions:                          |
+|:---------------------------------: | :----------------------------------------------------------------------------------------------------------: | 
+|           freeArr()                |                              Frees a dynamically allocated array of strings                                  |
+|           tokenizeInput()          |                              Breaks a string into tokens and returns an array of strings                     |
+|           exitHandler()            |                         Handles exit status according to received error tracking status                      |
+|           checkAccess()            |                              Checks if file is accessible at given path.                                     |
 
 
 ## Tech Stack 🧩
@@ -141,7 +150,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 	<img width="45px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png">
     &emsp;
 	<img width="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/1200px-Logo-ubuntu_cof-orange-hex.svg.png">
-	&emsp;
+	&emsi;
 	<img wigth="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/544px-Vimlogo.svg.png">
     &emsp;
     <img width="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">
