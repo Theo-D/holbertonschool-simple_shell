@@ -1,5 +1,5 @@
 <p align="center">
-<img src="mg/banner.jpg">
+<img src="img/banner.jpg">
 </p>
 
 # Simple shell - Holberton School Project 🧑‍🎓
