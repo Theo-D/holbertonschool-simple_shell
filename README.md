@@ -7,7 +7,7 @@
 
 ### Welcome to our Shell project ! 📟
 
-As part of our journey at Holberton School, we teamed up a group of three students to build our own simple shell in C.
+As part of our journey at Holberton School, we teamed up as a group of three students to build our own simple shell in C.
 This project was both a fun challenge and a great opportunity to dive deeper into the world of system programming.
 
 ## Table of contents 📄
@@ -82,18 +82,21 @@ In this project, we've built a basic shell in C that mimics the core functionali
 
 ## Testing and Output : 
 
-![fork_-_execve_-_wait](https://github.com/user-attachments/assets/e2179b67-691b-4426-9807-bb001a0093ef)
-
-
-
-![execution_of_builtin_or_executable](https://github.com/user-attachments/assets/10e9e1af-b4c6-4553-9a0b-db07f60fced0)
-
-
-
+#### A Peek at the main file:
 ![main c_topology](https://github.com/user-attachments/assets/be020504-f65a-4144-982f-19038485fee2)
 
 
 
+#### How is the distinction between builtins and executables is handled:
+![execution_of_builtin_or_executable](https://github.com/user-attachments/assets/10e9e1af-b4c6-4553-9a0b-db07f60fced0)
+
+
+
+#### In case of commande refering to an executable; the process of forking, executing and waiting ofr the child:
+![forkexecvewait](https://github.com/user-attachments/assets/e2179b67-691b-4426-9807-bb001a0093ef)
+
+
+#### What you see, is what you get:
 ![simple_shell_output](https://github.com/user-attachments/assets/d8ac1c28-ecdb-49d1-962b-461bc2656168)
 
 
