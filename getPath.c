@@ -14,9 +14,12 @@ char **getPath(void)
 	int i = 0, lineLen = 0;
 
 	if (environ == NULL || environ[0] == NULL || subStr == NULL)
-		return (NULL);
+		return (pathArr);
 
 	envCpy = environ;
+
+	if (envCpy[0] == NULL)
+		return (pathArr);
 
 	while (envCpy[i] != NULL)
 	{
@@ -36,7 +39,7 @@ char **getPath(void)
 	pathLine[lineLen - 5] = '\0';
 
 	if (pathLine == NULL)
-		return (NULL);
+		return (pathArr);
 
 	pathArr = tokenizeInput(pathLine, SEP);
 
