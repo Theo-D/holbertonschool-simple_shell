@@ -150,7 +150,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 	<img width="45px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png">
     &emsp;
 	<img width="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/1200px-Logo-ubuntu_cof-orange-hex.svg.png">
-	&emsi;
+	&emsp;
 	<img wigth="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/544px-Vimlogo.svg.png">
     &emsp;
     <img width="50px" height="50px" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">
@@ -158,9 +158,9 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o hsh
 
 ## Authors 🤝
 
-👨‍💻 Abdellah Dydouh : [azbin-spec](https://github.com/azbin-spec) / 9777@holbertonstudents.com
+🧑<200d>💻 Theo Dessaigne : [Theo-D](https://github.com/Theo-D) / 10540@holbertonstudents.com
 
-🧑‍💻 Theo Dessaigne : [Theo-D](https://github.com/Theo-D) / 10540@holbertonstudents.com
+👨‍💻 Abdellah Dydouh : [azbin-spec](https://github.com/azbin-spec) / 9777@holbertonstudents.com
 
 🧑‍💻 Louis Manchon : [LouisManchon](https://github.com/LouisManchon) / 10578@holbertonstudents.com
 
